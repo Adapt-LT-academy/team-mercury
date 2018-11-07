@@ -26,5 +26,7 @@ framework:
         #app: cache.adapter.redis
         #default_redis_provider: redis://localhost
 
-        # APCu (not recommended with heavy random-write workloads as memory fragmentation can cause perf issues)
+        # APCu (not recommended with heavy ranom-write workloads as memory fragmentation can cause perf issues)
         #app: cache.adapter.apcu
+
+    translator: { fallbacks: ["%locale%"] }

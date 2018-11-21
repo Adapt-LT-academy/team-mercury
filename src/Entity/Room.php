@@ -31,7 +31,7 @@ class Room
      *
      * @ORM\Column(type="integer", length=11)
      */
-    protected $ammountOfRooms = 0;
+    protected $numberOfRooms = 0;
     /**
      * Host can have many rooms
      * @ORM\ManyToOne(targetEntity="Host")

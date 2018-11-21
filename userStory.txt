@@ -1,0 +1,3 @@
+As a customer, I want to sort by city, host type, number of rooms, so that it would be easier to choose.
+As a customer, I want to see orders sorted by price, so that I can choose cheapest option.
+As a admin, I want to add new cities, hosts, rooms, and orders through admin panel. so that would be easier to add new stuff.

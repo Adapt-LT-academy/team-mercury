@@ -8,8 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\ Entity
  */
 
-
-class Size
+class Host
 {
     /**
      * @var int
@@ -20,34 +19,30 @@ class Size
      *
      */
     protected $id;
-
     /**
      * @var string
      *
      * @ORM\Column(type="string", length=255)
      */
     protected $name = '';
-
     /**
      * @var string
      *
-     * @ORM\Column(type="string", length=20)
+     * @ORM\Column(type="string", length=255)
      */
     protected $type = '';
-
     /**
-     * @var string
-     *
-     * @ORM\Column(type="string", length=20)
+     * @ORM\ManyToOne(targetEntity="City")
+     * @ORM\JoinColumn(name="city_id", referencedColumnName="id")
      */
-    protected $size = '';
-
+    private $city;
+    // ...
     /**
-     * @var int
-     *
-     * @ORM\Column(type="integer", length=11)
+     * One host has many rooms. This is the inverse side.
+     * @ORM\OneToMany(targetEntity="Room", mappedBy="host")
      */
-    protected $price = 0;
+    private $room;
+    // ...
 
     /**
      * @return int
@@ -56,7 +51,6 @@ class Size
     {
         return $this->id;
     }
-
     /**
      * @param int $id
      *
@@ -65,10 +59,8 @@ class Size
     public function setId(int $id): self
     {
         $this->id = $id;
-
         return $this;
     }
-
     /**
      * @return string
      */
@@ -76,7 +68,6 @@ class Size
     {
         return $this->name;
     }
-
     /**
      * @param string $name
      *
@@ -85,10 +76,8 @@ class Size
     public function setName(string $name): self
     {
         $this->name = $name;
-
         return $this;
     }
-
     /**
      * @return string
      */
@@ -96,7 +85,6 @@ class Size
     {
         return $this->type;
     }
-
     /**
      * @param string $type
      *
@@ -105,48 +93,9 @@ class Size
     public function setType(string $type): self
     {
         $this->type = $type;
-
         return $this;
     }
-
-    /**
-     * @return string
-     */
-    public function getSize(): string
-    {
-        return $this->size;
+    public function __construct() {
+        $this->room = new ArrayCollection();
     }
-
-    /**
-     * @param string $size
-     *
-     * @return $this
-     */
-    public function setSize(string $size): self
-    {
-        $this->size = $size;
-
-        return $this;
-    }
-
-    /**
-     * @return int
-     */
-    public function getPrice(): int
-    {
-        return $this->price;
-    }
-
-    /**
-     * @param int $price
-     *
-     * @return $this
-     */
-    public function setPrice(int $price): self
-    {
-        $this->price = $price;
-
-        return $this;
-    }
-
 }

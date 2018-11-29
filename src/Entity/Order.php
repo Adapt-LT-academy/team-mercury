@@ -5,6 +5,7 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\ Entity
+ * @ORM\ Table(name="orders")
  */
 
 
@@ -19,26 +20,27 @@ class Order
      *
      */
     protected $id;
-    /**
-     * @var int
-     *
-     * @ORM\Column(type="integer", length=11)
-     */
-    protected $price = 0;
+
 
     /**
-     * One room can have many orders
-     * @ORM\ManyToOne(targetEntity="Room")
+     * One room has many orders. This is the inverse side.
+     * @ORM\OneToMany(targetEntity="Apartament", mappedBy="order")
      * @ORM\JoinColumn(name="room_id", referencedColumnName="id")
      */
-    private $room;
+    private $apartament;
 
     /**
-     * One customer can have many orders
+     * Customer can have many orders
      * @ORM\ManyToOne(targetEntity="Customer")
      * @ORM\JoinColumn(name="customer_id", referencedColumnName="id")
      */
     private $customer;
+    /**
+     * One orderdRoom has many orders. This is the inverse side.
+     * @ORM\OneToMany(targetEntity="OrderedRoom", mappedBy="order")
+     */
+    private $orderedRooms;
+
     /**
      * @return int
      */
@@ -46,31 +48,72 @@ class Order
     {
         return $this->id;
     }
+
     /**
      * @param int $id
-     *
-     * @return $this
+     * @return Order
      */
-    public function setId(int $id): self
+    public function setId(int $id): Order
     {
         $this->id = $id;
         return $this;
     }
+
     /**
-     * @return int
+     * @return mixed
      */
-    public function getPrice(): int
+    public function getApartament()
     {
-        return $this->price;
+        return $this->apartament;
     }
+
     /**
-     * @param int $price
-     *
-     * @return $this
+     * @param mixed $apartament
+     * @return Order
      */
-    public function setPrice(int $price): self
+    public function setApartament($apartament)
     {
-        $this->price = $price;
+        $this->apartament = $apartament;
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCustomer()
+    {
+        return $this->customer;
+    }
+
+    /**
+     * @param mixed $customer
+     * @return Order
+     */
+    public function setCustomer($customer)
+    {
+        $this->customer = $customer;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getOrderedRooms()
+    {
+        return $this->orderedRooms;
+    }
+
+    /**
+     * @param mixed $orderedRooms
+     * @return Order
+     */
+    public function setOrderedRooms($orderedRooms)
+    {
+        $this->orderedRooms = $orderedRooms;
+        return $this;
+    }
+
+    public function __construct() {
+        $this->apartament = new ArrayCollection();
     }
 }

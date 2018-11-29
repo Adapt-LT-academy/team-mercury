@@ -26,14 +26,6 @@ class Customer
      * @ORM\Column(type="string", length=255)
      */
     protected $name = '';
-    // ...
-    /**
-     * One custumer has many orders. This is the inverse side.
-     * @ORM\OneToMany(targetEntity="Order", mappedBy="customer")
-     */
-    private $order;
-    // ...
-
 
     /**
      * @return int
@@ -42,16 +34,17 @@ class Customer
     {
         return $this->id;
     }
+
     /**
      * @param int $id
-     *
-     * @return $this
+     * @return Customer
      */
-    public function setId(int $id): self
+    public function setId(int $id): Customer
     {
         $this->id = $id;
         return $this;
     }
+
     /**
      * @return string
      */
@@ -59,16 +52,42 @@ class Customer
     {
         return $this->name;
     }
+
     /**
      * @param string $name
-     *
-     * @return $this
+     * @return Customer
      */
-    public function setName(string $name): self
+    public function setName(string $name): Customer
     {
         $this->name = $name;
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getOrder()
+    {
+        return $this->order;
+    }
+
+    /**
+     * @param mixed $order
+     * @return Customer
+     */
+    public function setOrder($order)
+    {
+        $this->order = $order;
+        return $this;
+    }
+    // ...
+    /**
+     * One custumer has many orders. This is the inverse side.
+     * @ORM\OneToMany(targetEntity="Order", mappedBy="customer")
+     */
+    private $order;
+    // ...
+
 
     public function __construct() {
         $this->order = new ArrayCollection();

@@ -15,7 +15,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
                 '$availableTo' => new \DateTime('2011-01-02'),
-                'host_id' => $this->getReference('host-3'),
+                'host_id' => $this->getReference('host-name2'),
             ],
             [
                 'number' => '102',
@@ -23,7 +23,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
                 '$availableTo' => new \DateTime('2011-01-02'),
-                'host_id' => $this->getReference('host-3'),
+                'host_id' => $this->getReference('host-name1'),
             ],
             [
                 'number' => '122',
@@ -31,7 +31,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
                 '$availableTo' => new \DateTime('2011-01-02'),
-                'host_id' => $this->getReference('host-2'),
+                'host_id' => $this->getReference('host-name2'),
             ],
             [
                 'number' => '122',
@@ -39,7 +39,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
                 '$availableTo' => new \DateTime('2011-01-02'),
-                'host_id' => $this->getReference('host-4'),
+                'host_id' => $this->getReference('host-name4'),
             ],
             [
                 'number' => '122',
@@ -47,7 +47,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
                 '$availableTo' => new \DateTime('2011-01-02'),
-                'host_id' => $this->getReference('host-4'),
+                'host_id' => $this->getReference('host-name4'),
             ],
 
         ];

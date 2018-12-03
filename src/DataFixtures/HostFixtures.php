@@ -13,27 +13,27 @@ class HostFixtures extends Fixture implements OrderedFixtureInterface{
             [
                 'name' => 'name1',
                 'type' => 'hotel',
-                'city_id' => $this->getReference('city-1'),
+                'city_id' => $this->getReference('city-Vilnius'),
             ],
             [
                 'name' => 'name2',
                 'type' => 'hotel',
-                'city_id' => $this->getReference('city-3'),
+                'city_id' => $this->getReference('city-London'),
             ],
             [
                 'name' => 'name3',
                 'type' => 'motel',
-                'city_id' => $this->getReference('city-1'),
+                'city_id' => $this->getReference('city-Vilnius'),
             ],
             [
                 'name' => 'name4',
                 'type' => 'hotel',
-                'city_id' => $this->getReference('city-2'),
+                'city_id' => $this->getReference('city-Berlin'),
             ],
             [
                 'name' => 'name5',
                 'type' => 'motel',
-                'city_id' => $this->getReference('city-1'),
+                'city_id' => $this->getReference('city-Kaunas'),
             ],
 
         ];
@@ -43,7 +43,7 @@ class HostFixtures extends Fixture implements OrderedFixtureInterface{
             $host->setType($item['type']);
             $host->setCity($item['city_id']);
             $manager->persist($host);
-            $this->addReference('host-'.$host->getId(), $host);
+            $this->addReference('host-'.$host->getName(), $host);
         }
         $manager->flush();
     }

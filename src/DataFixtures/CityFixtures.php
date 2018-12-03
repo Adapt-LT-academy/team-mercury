@@ -33,7 +33,7 @@ class CityFixtures extends Fixture implements OrderedFixtureInterface{
             $city->setName($item['name']);
 
             $manager->persist($city);
-            $this->addReference('city-'.$city->getId(), $city);
+            $this->addReference('city-'.$city->getName(), $city);
         }
         $manager->flush();
     }

@@ -8,6 +8,7 @@
 
 namespace App\Controller;
 
+
 use App\Service\RoomOrderConversation;
 use BotMan\BotMan\BotMan;
 use BotMan\BotMan\BotManFactory;
@@ -53,7 +54,7 @@ class IndexController extends Controller
         $botman->hears(
             '(hello|hi|hey)',
             function (BotMan $bot) {
-                $bot->startConversation(new RoomOrderConversation);
+                $bot->startConversation(new RoomOrderConversation());
             }
         );
         $botman->userStorage();

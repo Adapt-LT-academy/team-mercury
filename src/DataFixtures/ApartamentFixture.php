@@ -10,7 +10,6 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
     {
         $apartaments = [
             [
-                'id' => '1',
                 'number' => '122',
                 'numberOfRooms' => 2,
                 'price' => 201,
@@ -19,7 +18,6 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'host_id' => $this->getReference('host-3'),
             ],
             [
-                'id' => '2',
                 'number' => '102',
                 'numberOfRooms' => 2,
                 'price' => 201,
@@ -28,7 +26,6 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'host_id' => $this->getReference('host-3'),
             ],
             [
-                'id' => '3',
                 'number' => '122',
                 'numberOfRooms' => 2,
                 'price' => 201,
@@ -37,7 +34,6 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'host_id' => $this->getReference('host-2'),
             ],
             [
-                'id' => '4',
                 'number' => '122',
                 'numberOfRooms' => 2,
                 'price' => 201,
@@ -46,7 +42,6 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'host_id' => $this->getReference('host-4'),
             ],
             [
-                'id' => '5',
                 'number' => '122',
                 'numberOfRooms' => 2,
                 'price' => 201,
@@ -58,7 +53,6 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
         ];
         foreach ($apartaments as $item) {
             $apartament = new Apartament();
-            $apartament->setId($item['id']);
             $apartament->setNumber($item['price']);
             $apartament->setAvailableFrom($item['availableFrom']);
             $apartament->setAvailableTo($item['$availableTo']);

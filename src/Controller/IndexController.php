@@ -8,7 +8,7 @@
 
 namespace App\Controller;
 
-use App\Service\PizzaOrderConversation;
+use App\Service\RoomOrderConversation;
 use BotMan\BotMan\BotMan;
 use BotMan\BotMan\BotManFactory;
 use BotMan\BotMan\Cache\SymfonyCache;
@@ -53,7 +53,7 @@ class IndexController extends Controller
         $botman->hears(
             '(hello|hi|hey)',
             function (BotMan $bot) {
-                $bot->startConversation(new PizzaOrderConversation);
+                $bot->startConversation(new RoomOrderConversation);
             }
         );
         $botman->userStorage();

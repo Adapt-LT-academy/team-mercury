@@ -11,23 +11,18 @@ class CityFixtures extends Fixture implements OrderedFixtureInterface{
     {
         $cities = [
             [
-                'id' => '1',
                 'name' => 'Vilnius',
             ],
             [
-                'id' => '2',
                 'name' => 'Ryga',
             ],
             [
-                'id' => '3',
                 'name' => 'London',
             ],
             [
-                'id' => '4',
                 'name' => 'Kaunas',
             ],
             [
-                'id' => '5',
                 'name' => 'Berlin',
             ],
 
@@ -35,8 +30,6 @@ class CityFixtures extends Fixture implements OrderedFixtureInterface{
         foreach ($cities as $item) {
 
             $city = new City();
-            var_dump($city->setId($item['id']));
-            $city->setId($item['id']);
             $city->setName($item['name']);
 
             $manager->persist($city);

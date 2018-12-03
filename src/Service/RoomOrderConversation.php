@@ -57,9 +57,9 @@ class RoomOrderConversation extends Conversation
             function ($answer) {
               //  $this->city = $answer->getText();
 
-                $answer = $this->getContainer()->get(OptionsService::class)->findCity($this->$answer->getText());
+                $option = $this->getContainer()->get(OptionsService::class)->findCity($this->$answer->getText());
 
-                if ($answer){
+                if ($option){
                     $this->city = $this->$answer->getText();
                     $this->askType();
                 }else{
@@ -97,7 +97,7 @@ class RoomOrderConversation extends Conversation
         $buttons = [];
         foreach ($hosts as $host)
         {
-            $buttons[] = Button::create($hosts->getName())->value($host->getId());
+            $buttons[] = Button::create($this->$hosts->getName())->value($this->$host->getId());
         }
 
         $question = Question::create('In which'.$this->type.' do you want to stay?');
@@ -157,7 +157,7 @@ class RoomOrderConversation extends Conversation
         $buttons = [];
         foreach ($apartments as $apartment)
         {
-            $buttons[] = Button::create($apartments->getName())->value($apartment->getId());
+            $buttons[] = Button::create($this->$apartments->getName())->value($this->$apartment->getId());
         }
 
         $question = Question::create('In which apartment do you want to stay?');
@@ -181,7 +181,7 @@ class RoomOrderConversation extends Conversation
         $this->ask(
             'What is your name?',
             function ($answer) {
-                $this->address = $answer->getText();
+                $this->customer = $this->$answer->getText();
                 $this->say('Okay. Your apartament is ordered.');
                 $this->say('City: ' . $this->city);
                 $this->say($this->type . ' : ' . $this->host);
@@ -202,6 +202,6 @@ class RoomOrderConversation extends Conversation
         $orderedRoom->setOrderedTo($this->orderedToDate);
 
 
-        return $message->getMessage() === 'stop';
+        return $this->$message->getMessage() === 'stop';
     }
 }

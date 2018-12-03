@@ -60,7 +60,7 @@ class RoomOrderConversation extends Conversation
                 $answer = $this->getContainer()->get(OptionsService::class)->findCity($this->$answer->getText());
 
                 if ($answer){
-                    $this->city = $answer->getText();
+                    $this->city = $this->$answer->getText();
                     $this->askType();
                 }else{
                     $this->say('Sorry, in this city are any host. Please try again.');
@@ -85,7 +85,7 @@ class RoomOrderConversation extends Conversation
         $this->ask(
             $question,
             function ($answer) {
-                $this->type = $answer->getText();
+                $this->type = $this->$answer->getText();
                 $this->askHost();
             }
         );
@@ -107,7 +107,7 @@ class RoomOrderConversation extends Conversation
         $this->ask(
             $question,
             function ($answer){
-                $this->host = $answer->getText();
+                $this->host = $this->$answer->getText();
                 $this->askFromDate();
             }
         );
@@ -119,7 +119,7 @@ class RoomOrderConversation extends Conversation
         $this->ask(
             $question,
             function ($answer) {
-                $this->orderedFromDate = $answer->getText();
+                $this->orderedFromDate = $this->$answer->getText();
                 $this->askToDate();
             }
         );
@@ -131,7 +131,7 @@ class RoomOrderConversation extends Conversation
         $this->ask(
             $question,
             function ($answer) {
-                $this->orderedToDate = $answer->getText();
+                $this->orderedToDate = $this->$answer->getText();
                 $this->findApartments();
             }
         );
@@ -167,7 +167,7 @@ class RoomOrderConversation extends Conversation
         $this->ask(
             $question,
             function ($answer){
-                $this->apartment = $answer->getText();
+                $this->apartment = $this->$answer->getText();
                 $this->askCustomerData();
             }
         );

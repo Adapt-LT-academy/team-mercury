@@ -8,12 +8,14 @@
 
 namespace App\Service;
 
+use App\Entity\Host;
 use App\Entity\OrderedRoom;
 use App\Traits\ContainerAwareConversationTrait;
 use BotMan\BotMan\Messages\Conversations\Conversation;
 use BotMan\BotMan\Messages\Incoming\IncomingMessage;
 use BotMan\BotMan\Messages\Outgoing\Actions\Button;
 use BotMan\BotMan\Messages\Outgoing\Question;
+use http\Exception\RuntimeException;
 
 class RoomOrderConversation extends Conversation
 {
@@ -36,14 +38,10 @@ class RoomOrderConversation extends Conversation
     protected $orderedToDate;
 
 
-
     public function run()
     {
 
 
-
-
-        $this->say('Hello!');
         $this->askCity();
     }
 
@@ -57,15 +55,14 @@ class RoomOrderConversation extends Conversation
             function ($answer) {
               //  $this->city = $answer->getText();
 
-                $answer = $this->getContainer()->get(OptionsService::class)->findCity($this->$answer->getText());
+                $city = $this->getContainer()->get(OptionsService::class)->isCityAvailable($answer->getText());
 
-                if ($answer){
-                    $this->city = $this->$answer->getText();
+                if ($city){
+                    $this->city = $answer->getText();
                     $this->askType();
                 }else{
                     $this->say('Sorry, in this city are any host. Please try again.');
                     $this->askCity();
-
                 }
             }
         );
@@ -85,29 +82,37 @@ class RoomOrderConversation extends Conversation
         $this->ask(
             $question,
             function ($answer) {
-                $this->type = $this->$answer->getText();
+                $this->type = $answer->getText();
                 $this->askHost();
             }
         );
     }
 
+    /**
+     *
+     */
     public function askHost()
     {
         $hosts = $this->getContainer()->get(OptionsService::class)->getHosts($this->type, $this->city);
+
         $buttons = [];
         foreach ($hosts as $host)
         {
-            $buttons[] = Button::create($hosts->getName())->value($host->getId());
-        }
+            $buttons[] = Button::create($host->getName())->value($host->getName());
 
-        $question = Question::create('In which'.$this->type.' do you want to stay?');
-        $question->addButtons(
-            $buttons
-        );
+        }
+        $buttons[] = Button::create('🌭gasggsa')->value('fsafsa');
+        $question = Question::create('In which '.$this->type.' do you want to stay?');
+        $question->addButtons($buttons);
         $this->ask(
             $question,
-            function ($answer){
-                $this->host = $this->$answer->getText();
+            function ($answer) use ($hosts){
+                foreach ($hosts as $host){
+                    if ($host->getName() == $answer->getText()){
+                        $this->host = $host;
+                        break;
+                    }
+                }
                 $this->askFromDate();
             }
         );
@@ -119,7 +124,7 @@ class RoomOrderConversation extends Conversation
         $this->ask(
             $question,
             function ($answer) {
-                $this->orderedFromDate = $this->$answer->getText();
+                $this->orderedFromDate = new \DateTime($answer->getText());
                 $this->askToDate();
             }
         );
@@ -131,7 +136,7 @@ class RoomOrderConversation extends Conversation
         $this->ask(
             $question,
             function ($answer) {
-                $this->orderedToDate = $this->$answer->getText();
+                $this->orderedToDate = new \DateTime($answer->getText());
                 $this->findApartments();
             }
         );
@@ -141,7 +146,7 @@ class RoomOrderConversation extends Conversation
     private function findApartments()
     {
         $apartments = $this->getContainer()->get(OptionsService::class)->getApartments($this->host, $this->orderedFromDate, $this->orderedToDate );
-        if (var_dump(count($apartments)) > 0)
+        if (count($apartments) > 0)
         {
             $this->askApartment($apartments);
         }else{
@@ -157,7 +162,7 @@ class RoomOrderConversation extends Conversation
         $buttons = [];
         foreach ($apartments as $apartment)
         {
-            $buttons[] = Button::create($apartments->getName())->value($apartment->getId());
+            $buttons[] = Button::create($apartment->getNumber())->value($apartment->getNumber());
         }
 
         $question = Question::create('In which apartment do you want to stay?');
@@ -166,8 +171,14 @@ class RoomOrderConversation extends Conversation
         );
         $this->ask(
             $question,
-            function ($answer){
-                $this->apartment = $this->$answer->getText();
+            function ($answer) use ($apartments){
+                $this->apartment = $answer->getText();
+                foreach ($apartments as $apartment)
+                {
+                    if($apartment->getNumber() == $answer->getText()){
+                        $this->price = $apartment->getPrice();
+                    }
+                }
                 $this->askCustomerData();
             }
         );
@@ -185,7 +196,7 @@ class RoomOrderConversation extends Conversation
                 $this->say('Okay. Your apartament is ordered.');
                 $this->say('City: ' . $this->city);
                 $this->say($this->type . ' : ' . $this->host);
-                $this->say('Date: from ' . $this->orderedFromDate . ' to ' . $this->orderedToDate);
+                $this->say('Date: from ' . $this->orderedFromDate->format('Y-m-d') . ' to ' . $this->orderedToDate->format('Y-m-d'));
                 $this->say('Price: ' . $this->price);
             }
         );

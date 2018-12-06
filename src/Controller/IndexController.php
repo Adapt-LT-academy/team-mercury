@@ -27,6 +27,7 @@ class IndexController extends Controller
      */
     public function index(): Response
     {
+
         return $this->render('base.html.twig');
     }
 

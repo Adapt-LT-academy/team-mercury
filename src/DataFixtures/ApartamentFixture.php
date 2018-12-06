@@ -14,7 +14,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-02'),
+                '$availableTo' => new \DateTime('2019-01-02'),
                 'host_id' => $this->getReference('host-name2'),
             ],
             [
@@ -22,7 +22,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-02'),
+                '$availableTo' => new \DateTime('2019-01-02'),
                 'host_id' => $this->getReference('host-name1'),
             ],
             [
@@ -30,7 +30,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-02'),
+                '$availableTo' => new \DateTime('2019-01-02'),
                 'host_id' => $this->getReference('host-name2'),
             ],
             [
@@ -38,7 +38,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-02'),
+                '$availableTo' => new \DateTime('2019-01-02'),
                 'host_id' => $this->getReference('host-name4'),
             ],
             [
@@ -46,14 +46,16 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-02'),
+                '$availableTo' => new \DateTime('2019-01-02'),
                 'host_id' => $this->getReference('host-name4'),
             ],
 
         ];
         foreach ($apartaments as $item) {
             $apartament = new Apartament();
-            $apartament->setNumber($item['price']);
+            $apartament->setNumber($item['number']);
+            $apartament->setNumberOfRooms($item['numberOfRooms']);
+            $apartament->setPrice($item['price']);
             $apartament->setAvailableFrom($item['availableFrom']);
             $apartament->setAvailableTo($item['$availableTo']);
             $apartament->setHost($item['host_id']);

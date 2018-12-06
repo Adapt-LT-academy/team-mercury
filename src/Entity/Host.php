@@ -3,13 +3,13 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * @ORM\ Entity
+ * @ORM\ Entity(repositoryClass = "App\Repository\HostRepository")
  */
 
-
-class Size
+class Host
 {
     /**
      * @var int
@@ -20,34 +20,29 @@ class Size
      *
      */
     protected $id;
-
     /**
      * @var string
      *
      * @ORM\Column(type="string", length=255)
      */
     protected $name = '';
-
     /**
      * @var string
      *
-     * @ORM\Column(type="string", length=20)
+     * @ORM\Column(type="string", length=255)
      */
     protected $type = '';
-
     /**
-     * @var string
-     *
-     * @ORM\Column(type="string", length=20)
+     * @ORM\ManyToOne(targetEntity="City")
+     * @ORM\JoinColumn(name="city_id", referencedColumnName="id")
      */
-    protected $size = '';
-
+    private $city;
+    // ...
     /**
-     * @var int
-     *
-     * @ORM\Column(type="integer", length=11)
+     * One host has many rooms. This is the inverse side.
+     * @ORM\OneToMany(targetEntity="Apartament", mappedBy="host")
      */
-    protected $price = 0;
+    private $apartament;
 
     /**
      * @return int
@@ -59,13 +54,11 @@ class Size
 
     /**
      * @param int $id
-     *
-     * @return $this
+     * @return Host
      */
-    public function setId(int $id): self
+    public function setId(int $id): Host
     {
         $this->id = $id;
-
         return $this;
     }
 
@@ -79,13 +72,11 @@ class Size
 
     /**
      * @param string $name
-     *
-     * @return $this
+     * @return Host
      */
-    public function setName(string $name): self
+    public function setName(string $name): Host
     {
         $this->name = $name;
-
         return $this;
     }
 
@@ -99,54 +90,56 @@ class Size
 
     /**
      * @param string $type
-     *
-     * @return $this
+     * @return Host
      */
-    public function setType(string $type): self
+    public function setType(string $type): Host
     {
         $this->type = $type;
-
         return $this;
     }
 
     /**
-     * @return string
+     * @return mixed
      */
-    public function getSize(): string
+    public function getCity()
     {
-        return $this->size;
+        return $this->city;
     }
 
     /**
-     * @param string $size
-     *
-     * @return $this
+     * @param mixed $city
+     * @return Host
      */
-    public function setSize(string $size): self
+    public function setCity(City $city)
     {
-        $this->size = $size;
-
+        $this->city = $city;
         return $this;
     }
 
     /**
-     * @return int
+     * @return mixed
      */
-    public function getPrice(): int
+    public function getApartament()
     {
-        return $this->price;
+        return $this->apartament;
     }
 
     /**
-     * @param int $price
-     *
-     * @return $this
+     * @param mixed $apartament
+     * @return Host
      */
-    public function setPrice(int $price): self
+    public function setApartament($apartament)
     {
-        $this->price = $price;
-
+        $this->apartament = $apartament;
         return $this;
     }
+    // ...
 
+    public function __construct() {
+        $this->apartament = new ArrayCollection();
+    }
+    public function __toString()
+    {
+        return $this->getName();
+    }
 }

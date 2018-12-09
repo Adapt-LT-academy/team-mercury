@@ -12,6 +12,7 @@ use App\Entity\OrderedRoom;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
+use App\Entity\Apartament;
 
 class OrderedRoomService
 {
@@ -20,8 +21,10 @@ class OrderedRoomService
     {
         $this->om = $manager;
     }
+
     public function addOrderedRoomData(OrderedRoom $orderedRoom){
         $this->om->persist($orderedRoom);
         $this->om->flush();
     }
+
 }

@@ -222,15 +222,14 @@ class RoomOrderConversation extends Conversation
         $orderObject->setCustomer($customerObject);
         $this->getContainer()->get(OrderService::class)->addOrderData($orderObject);
 
+        $apartment = $this->getContainer()->get(OptionsService::class)->getApartment($this->apartment->getId());
         $orderedRoomObject = new OrderedRoom();
-        $orderedRoomObject->setApartament($this->apartment);
+        $orderedRoomObject->setApartament($apartment);
         $orderedRoomObject->setPrice($this->price);
         $orderedRoomObject->setOrderedFrom($this->orderedFromDate);
         $orderedRoomObject->setOrderedTo($this->orderedToDate);
         $orderedRoomObject->setOrder($orderObject);
-
-        //error_log($orderedRoomObject->getId());
-        //$this->getContainer()->get(OrderedRoomService::class)->addOrderedRoomData($orderedRoomObject);
+        $this->getContainer()->get(OrderedRoomService::class)->addOrderedRoomData($orderedRoomObject);
     }
 
     public function stopConversation(IncomingMessage $message)

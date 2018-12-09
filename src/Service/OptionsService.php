@@ -55,6 +55,8 @@ class OptionsService
 
     }
 
-
-
+    public function getApartment($id)
+    {
+        return $this->em->getRepository(Apartament::class)->find($id);
+    }
 }

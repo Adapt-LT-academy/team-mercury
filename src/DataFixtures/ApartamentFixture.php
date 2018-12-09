@@ -6,9 +6,9 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 
 class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
-    public function load(ObjectManager $manager)
-    {
-        $apartaments = [
+
+    public function apartamentData(){
+        return [
             [
                 'number' => '122',
                 'numberOfRooms' => 2,
@@ -51,7 +51,11 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
             ],
 
         ];
-        foreach ($apartaments as $item) {
+    }
+
+    public function load(ObjectManager $manager)
+    {
+        foreach ($this->apartamentData() as $item) {
             $apartament = new Apartament();
             $apartament->setNumber($item['number']);
             $apartament->setNumberOfRooms($item['numberOfRooms']);

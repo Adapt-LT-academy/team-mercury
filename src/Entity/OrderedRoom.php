@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+
 /**
  * @ORM\ Entity
  */
@@ -21,8 +23,8 @@ class OrderedRoom
      */
     protected $id;
     /**
-     * OrderRoom can have many rders
-     * @ORM\ManyToOne(targetEntity="Order")
+     * OrderRoom can have many orders
+     * @ORM\ManyToOne(targetEntity="Order",cascade={"persist"})
      * @ORM\JoinColumn(name="order_id", referencedColumnName="id")
      */
     private $order;
@@ -33,18 +35,18 @@ class OrderedRoom
      */
     protected $price = 0;
     /**
-     * @ORM\OneToOne(targetEntity="Apartament")
+     * @ORM\OneToOne(targetEntity="Apartament", cascade={"persist"})
      * @ORM\JoinColumn(name="apartament_id", referencedColumnName="id")
      */
-    private $apartament;
+    protected $apartament;
     /**
      * @ORM\Column(type="datetime")
      */
-    private $orderedFrom;
+    protected $orderedFrom;
     /**
      * @ORM\Column(type="datetime")
      */
-    private $orderedTo;
+    protected $orderedTo;
     /**
      * @return int
      */

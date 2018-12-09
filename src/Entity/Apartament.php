@@ -3,8 +3,10 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+
 /**
- * @ORM\ Entity
+ * @ORM\ Entity(repositoryClass = "App\Repository\ApartamentRepository")
  */
 
 
@@ -28,7 +30,6 @@ class Apartament
     protected $number;
 
     /**
-     * @TODO susitvarkyti naming
      * @var int
      *
      * @ORM\Column(type="integer", length=11)

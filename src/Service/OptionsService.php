@@ -38,15 +38,14 @@ class OptionsService
     }
 
     /**
-     * @param String $host
+     * @param String $hostName
      * @param \DateTime $orderedFrom
      * @param \DateTime $orderedTo
      * @return Apartament[]|array
      */
-    public function getApartments(Host $host, \DateTime $orderedFrom, \DateTime $orderedTo)
+    public function getApartments(string $hostName)
     {
-        return $this->em->getRepository(Apartament::class)->findBy(array('host' => $host));
-
+        return $this->em->getRepository(Apartament::class)->findApartamentsByHotelNameAndDataTime($hostName);
     }
 
     public function isCityAvailable(string $city)

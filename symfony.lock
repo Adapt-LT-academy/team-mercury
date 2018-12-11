@@ -1,4 +1,7 @@
 {
+    "behat/gherkin": {
+        "version": "v4.5.1"
+    },
     "botman/botman": {
         "version": "2.4.1"
     },
@@ -7,6 +10,24 @@
     },
     "cocur/slugify": {
         "version": "v3.1"
+    },
+    "codeception/c3": {
+        "version": "2.4.1"
+    },
+    "codeception/codeception": {
+        "version": "2.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "2.3",
+            "ref": "d2a29c0abee586aff913fd45fae1f59b669f4cbe"
+        }
+    },
+    "codeception/phpunit-wrapper": {
+        "version": "7.5.0"
+    },
+    "codeception/stub": {
+        "version": "2.0.4"
     },
     "doctrine/annotations": {
         "version": "1.0",
@@ -107,6 +128,15 @@
     "fig/link-util": {
         "version": "1.0.0"
     },
+    "guzzlehttp/guzzle": {
+        "version": "6.3.3"
+    },
+    "guzzlehttp/promises": {
+        "version": "v1.3.1"
+    },
+    "guzzlehttp/psr7": {
+        "version": "1.5.2"
+    },
     "hamcrest/hamcrest-php": {
         "version": "v2.0.0"
     },
@@ -191,6 +221,9 @@
     "psr/container": {
         "version": "1.0.0"
     },
+    "psr/http-message": {
+        "version": "1.0.1"
+    },
     "psr/link": {
         "version": "1.0.0"
     },
@@ -199,6 +232,9 @@
     },
     "psr/simple-cache": {
         "version": "1.0.1"
+    },
+    "ralouphie/getallheaders": {
+        "version": "2.0.5"
     },
     "react/cache": {
         "version": "v0.5.0"
@@ -304,6 +340,15 @@
     },
     "swiftmailer/swiftmailer": {
         "version": "v6.1.3"
+    },
+    "symfony/apache-pack": {
+        "version": "1.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.0",
+            "ref": "c82bead70f9a4f656354a193df7bf0ca2114efa0"
+        }
     },
     "symfony/asset": {
         "version": "v4.1.6"

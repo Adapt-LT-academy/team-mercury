@@ -5,23 +5,26 @@
  * Date: 18.11.7
  * Time: 18.32
  */
-
 namespace App\Controller;
-
-
 use App\Service\RoomOrderConversation;
 use BotMan\BotMan\BotMan;
 use BotMan\BotMan\BotManFactory;
 use BotMan\BotMan\Cache\SymfonyCache;
 use BotMan\BotMan\Drivers\DriverManager;
 use BotMan\BotMan\Middleware\ApiAi;
+use Doctrine\Common\Persistence\ManagerRegistry;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Cache\Adapter\FilesystemAdapter;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
+use App\Service\DatabaseService;
+use Doctrine\Common\Persistence\ObjectManager;
+use Symfony\Component\Security\Core\Exception\AccessDeniedException;
+use App\Traits\ContainerAwareConversationTrait;
+use BotMan\BotMan\Messages\Incoming\IncomingMessage;
 class IndexController extends Controller
 {
+    use ContainerAwareConversationTrait;
     /**
      * @Route(path="/", methods={"GET"}, name="botmanChat")
      */
@@ -29,7 +32,6 @@ class IndexController extends Controller
     {
         return $this->render('base.html.twig');
     }
-
     /**
      * @Route(path="/chat", methods={"GET"}, name="botman")
      */
@@ -37,12 +39,12 @@ class IndexController extends Controller
     {
         return $this->render('botman.html.twig');
     }
-
     /**
      * @Route("/message", name="message")
      */
     function messageAction()
     {
+        $this->converstionObj = new RoomOrderConversation();
         // Create a BotMan instance, using the WebDriver
         DriverManager::loadDriver(\BotMan\Drivers\Web\WebDriver::class);
         $adapter = new FilesystemAdapter();
@@ -69,5 +71,4 @@ class IndexController extends Controller
         //Send an empty response (Botman has already sent the output itself - https://github.com/botman/botman/issues/342)
         return new Response();
     }
-
 }

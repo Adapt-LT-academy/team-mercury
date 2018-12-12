@@ -31,35 +31,32 @@ class OptionsService
      * @param String $city
      * @return Host[]|array
      */
-    public function getHosts(String $type, String $city)
+    public function getHosts(string $type, string $city)
     {
         //$host = new Host();
-        return $this->em->getRepository(Host::class)->findBy(array('type' => $type ), array('city' => $city));
+        return $this->em->getRepository(Host::class)->findHostsByCityAndType($city, $type);
     }
 
     /**
-     * @param String $host
+     * @param String $hostName
      * @param \DateTime $orderedFrom
      * @param \DateTime $orderedTo
      * @return Apartament[]|array
      */
-    public function getApartments(String $host, \DateTime $orderedFrom, \DateTime $orderedTo)
+    public function getApartments(string $hostName)
     {
-        return $this->em->getRepository(Apartament::class)->findBy(array('host' => $host ), array('$availableFrom' => $orderedFrom), array('$availableTo' => $orderedTo));
-
+        return $this->em->getRepository(Apartament::class)->findApartamentsByHotelNameAndDataTime($hostName);
     }
 
-    public function findCity(String $city)
+    public function isCityAvailable(string $city)
     {
         $isCity = $this->em->getRepository(City::class)->findBy(array('name' => $city ));
-        if(var_dump(count($isCity)) > 0)
-        {
-            return true;
-        }
-        return false;
+        return count($isCity) > 0;
 
     }
 
-
-
+    public function getApartment($id)
+    {
+        return $this->em->getRepository(Apartament::class)->find($id);
+    }
 }

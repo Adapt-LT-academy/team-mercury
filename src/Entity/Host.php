@@ -6,7 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
- * @ORM\ Entity
+ * @ORM\ Entity(repositoryClass = "App\Repository\HostRepository")
  */
 
 class Host
@@ -137,5 +137,9 @@ class Host
 
     public function __construct() {
         $this->apartament = new ArrayCollection();
+    }
+    public function __toString()
+    {
+        return $this->getName();
     }
 }

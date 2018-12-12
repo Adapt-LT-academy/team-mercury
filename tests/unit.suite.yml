@@ -1,0 +1,9 @@
+# Codeception Test Suite Configuration
+#
+# Suite for unit or orderTest tests.
+
+actor: UnitTester
+modules:
+    enabled:
+        - Asserts
+        - \App\Tests\Helper\Unit

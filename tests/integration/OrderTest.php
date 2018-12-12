@@ -47,11 +47,11 @@ class orderTest extends KernelTestCase
     public function testOrderTotal()
     {
         /**
-         * @var City $city
+         * @var City $nameCity
          */
         $nameCity = $this->entityManager
             ->getRepository(City::class)
-            ->findOneBy(['city' => 'Kaunas'])
+            ->findOneBy(['name' => 'Kaunas'])
         ;
 
         /**
@@ -59,7 +59,7 @@ class orderTest extends KernelTestCase
          */
         $type = $this->entityManager
             ->getRepository(Host::class)
-            ->findOneBy(['type' => 'motel', 'city'=>'Kaunas'])
+            ->findOneBy(['type' => 'motel', 'city'=>$nameCity])
         ;
 
         /**
@@ -67,7 +67,7 @@ class orderTest extends KernelTestCase
          */
         $host = $this->entityManager
             ->getRepository(Host::class)
-            ->findOneBy(['type' => 'motel', 'city'=>'Kaunas'])
+            ->findOneBy(['type' => 'motel', 'city'=>$nameCity])
         ;
 
         /**

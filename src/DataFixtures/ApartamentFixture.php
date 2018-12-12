@@ -14,7 +14,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-01'),
-                '$availableTo' => new \DateTime('2011-01-02'),
+                'availableTo' => new \DateTime('2011-01-02'),
                 'host_id' => $this->getReference('Amberton'),
             ],
             [
@@ -22,7 +22,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Amberton'),
             ],
             [
@@ -30,7 +30,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Amberton'),
             ],
             [
@@ -38,7 +38,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-03'),
-                '$availableTo' => new \DateTime('2011-01-04'),
+                'availableTo' => new \DateTime('2011-01-04'),
                 'host_id' => $this->getReference('Amberton'),
             ],
             [
@@ -46,7 +46,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('Amberton'),
             ],
             [
@@ -54,7 +54,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Amberton'),
             ],
             [
@@ -62,7 +62,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('Amberton'),
             ],
             [
@@ -70,7 +70,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-01'),
-                '$availableTo' => new \DateTime('2011-01-02'),
+                'availableTo' => new \DateTime('2011-01-02'),
                 'host_id' => $this->getReference('Panorama'),
             ],
             [
@@ -78,7 +78,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Panorama'),
             ],
             [
@@ -86,7 +86,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Panorama'),
             ],
             [
@@ -94,7 +94,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-03'),
-                '$availableTo' => new \DateTime('2011-01-04'),
+                'availableTo' => new \DateTime('2011-01-04'),
                 'host_id' => $this->getReference('Panorama'),
             ],
             [
@@ -102,7 +102,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('Panorama'),
             ],
             [
@@ -110,7 +110,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Panorama'),
             ],
             [
@@ -118,7 +118,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('Panorama'),
             ],
             [
@@ -126,7 +126,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-01'),
-                '$availableTo' => new \DateTime('2011-01-02'),
+                'availableTo' => new \DateTime('2011-01-02'),
                 'host_id' => $this->getReference('Ecotel'),
             ],
             [
@@ -134,7 +134,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 3,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Ecotel'),
             ],
             [
@@ -142,7 +142,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Ecotel'),
             ],
             [
@@ -150,7 +150,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-03'),
-                '$availableTo' => new \DateTime('2011-01-04'),
+                'availableTo' => new \DateTime('2011-01-04'),
                 'host_id' => $this->getReference('Ecotel'),
             ],
             [
@@ -158,7 +158,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 4,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('Ecotel'),
             ],
             [
@@ -166,7 +166,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 4,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Ecotel'),
             ],
             [
@@ -174,7 +174,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('Ecotel'),
             ],
             [
@@ -182,7 +182,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-01'),
-                '$availableTo' => new \DateTime('2011-01-02'),
+                'availableTo' => new \DateTime('2011-01-02'),
                 'host_id' => $this->getReference('Baltazaras'),
             ],
             [
@@ -190,7 +190,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 3,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Baltazaras'),
             ],
             [
@@ -198,7 +198,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Baltazaras'),
             ],
             [
@@ -206,7 +206,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-03'),
-                '$availableTo' => new \DateTime('2011-01-04'),
+                'availableTo' => new \DateTime('2011-01-04'),
                 'host_id' => $this->getReference('Baltazaras'),
             ],
             [
@@ -214,7 +214,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 4,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('Baltazaras'),
             ],
             [
@@ -222,7 +222,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 4,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Baltazaras'),
             ],
             [
@@ -230,7 +230,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('Baltazaras'),
             ],
             [
@@ -238,7 +238,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-01'),
-                '$availableTo' => new \DateTime('2011-01-02'),
+                'availableTo' => new \DateTime('2011-01-02'),
                 'host_id' => $this->getReference('CitizenM Tower of London'),
             ],
             [
@@ -246,7 +246,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 3,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('CitizenM Tower of London'),
             ],
             [
@@ -254,7 +254,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('CitizenM Tower of London'),
             ],
             [
@@ -262,7 +262,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-03'),
-                '$availableTo' => new \DateTime('2011-01-04'),
+                'availableTo' => new \DateTime('2011-01-04'),
                 'host_id' => $this->getReference('CitizenM Tower of London'),
             ],
             [
@@ -270,7 +270,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 4,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('CitizenM Tower of London'),
             ],
             [
@@ -278,7 +278,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 4,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('CitizenM Tower of London'),
             ],
             [
@@ -286,7 +286,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('CitizenM Tower of London'),
             ],
             [
@@ -294,7 +294,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-01'),
-                '$availableTo' => new \DateTime('2011-01-02'),
+                'availableTo' => new \DateTime('2011-01-02'),
                 'host_id' => $this->getReference('Grata by Centrum Hostel'),
             ],
             [
@@ -302,7 +302,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 3,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Grata by Centrum Hostel'),
             ],
             [
@@ -310,7 +310,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Grata by Centrum Hostel'),
             ],
             [
@@ -318,7 +318,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-03'),
-                '$availableTo' => new \DateTime('2011-01-04'),
+                'availableTo' => new \DateTime('2011-01-04'),
                 'host_id' => $this->getReference('Grata by Centrum Hostel'),
             ],
             [
@@ -326,7 +326,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 4,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('Grata by Centrum Hostel'),
             ],
             [
@@ -334,7 +334,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 4,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Grata by Centrum Hostel'),
             ],
             [
@@ -342,7 +342,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('Grata by Centrum Hostel'),
             ],
             [
@@ -350,7 +350,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-01'),
-                '$availableTo' => new \DateTime('2011-01-02'),
+                'availableTo' => new \DateTime('2011-01-02'),
                 'host_id' => $this->getReference('The Premier Notting Hill'),
             ],
             [
@@ -358,7 +358,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 3,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('The Premier Notting Hill'),
             ],
             [
@@ -366,7 +366,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('The Premier Notting Hill'),
             ],
             [
@@ -374,7 +374,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-03'),
-                '$availableTo' => new \DateTime('2011-01-04'),
+                'availableTo' => new \DateTime('2011-01-04'),
                 'host_id' => $this->getReference('The Premier Notting Hill'),
             ],
             [
@@ -382,7 +382,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 4,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('The Premier Notting Hill'),
             ],
             [
@@ -390,7 +390,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 4,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('The Premier Notting Hill'),
             ],
             [
@@ -398,7 +398,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('The Premier Notting Hill'),
             ],
             [
@@ -406,7 +406,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-01'),
-                '$availableTo' => new \DateTime('2011-01-02'),
+                'availableTo' => new \DateTime('2011-01-02'),
                 'host_id' => $this->getReference('CitizenM Tower of London'),
             ],
             [
@@ -414,7 +414,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 3,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('CitizenM Tower of London'),
             ],
             [
@@ -422,7 +422,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('CitizenM Tower of London'),
             ],
             [
@@ -430,7 +430,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-03'),
-                '$availableTo' => new \DateTime('2011-01-04'),
+                'availableTo' => new \DateTime('2011-01-04'),
                 'host_id' => $this->getReference('CitizenM Tower of London'),
             ],
             [
@@ -438,7 +438,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 4,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('CitizenM Tower of London'),
             ],
             [
@@ -446,7 +446,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 4,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('CitizenM Tower of London'),
             ],
             [
@@ -454,7 +454,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('CitizenM Tower of London'),
             ],
             [
@@ -462,7 +462,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-01'),
-                '$availableTo' => new \DateTime('2011-01-02'),
+                'availableTo' => new \DateTime('2011-01-02'),
                 'host_id' => $this->getReference('Royal Eagle Hotel'),
             ],
             [
@@ -470,7 +470,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 3,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Royal Eagle Hotel'),
                 'availableTo' => new \DateTime('2019-01-02'),
             ],
@@ -487,7 +487,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-03'),
-                '$availableTo' => new \DateTime('2011-01-04'),
+                'availableTo' => new \DateTime('2011-01-04'),
                 'host_id' => $this->getReference('Royal Eagle Hotel'),
             ],
             [
@@ -495,7 +495,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 4,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('Royal Eagle Hotel'),
             ],
             [
@@ -503,7 +503,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 4,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Royal Eagle Hotel'),
             ],
             [
@@ -511,7 +511,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('Royal Eagle Hotel'),
             ],
             [
@@ -519,7 +519,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-01'),
-                '$availableTo' => new \DateTime('2011-01-02'),
+                'availableTo' => new \DateTime('2011-01-02'),
                 'host_id' => $this->getReference('Blakemore Hyde Park'),
             ],
             [
@@ -527,7 +527,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 3,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Blakemore Hyde Park'),
             ],
             [
@@ -535,7 +535,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Blakemore Hyde Park'),
             ],
             [
@@ -543,7 +543,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-03'),
-                '$availableTo' => new \DateTime('2011-01-04'),
+                'availableTo' => new \DateTime('2011-01-04'),
                 'host_id' => $this->getReference('Blakemore Hyde Park'),
             ],
             [
@@ -551,7 +551,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 4,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('Blakemore Hyde Park'),
             ],
             [
@@ -567,7 +567,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('Blakemore Hyde Park'),
             ],
             [
@@ -575,7 +575,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-01'),
-                '$availableTo' => new \DateTime('2011-01-02'),
+                'availableTo' => new \DateTime('2011-01-02'),
                 'host_id' => $this->getReference('Best Western Victoria Palace'),
             ],
             [
@@ -583,7 +583,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 3,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Best Western Victoria Palace'),
             ],
             [
@@ -599,7 +599,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-03'),
-                '$availableTo' => new \DateTime('2011-01-04'),
+                'availableTo' => new \DateTime('2011-01-04'),
                 'host_id' => $this->getReference('Best Western Victoria Palace'),
             ],
             [
@@ -607,7 +607,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 4,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('Best Western Victoria Palace'),
             ],
             [
@@ -615,7 +615,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 4,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Best Western Victoria Palace'),
             ],
             [
@@ -623,7 +623,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('Best Western Victoria Palace'),
             ],
             [
@@ -631,7 +631,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-01'),
-                '$availableTo' => new \DateTime('2011-01-02'),
+                'availableTo' => new \DateTime('2011-01-02'),
                 'host_id' => $this->getReference('Dorsett City'),
             ],
             [
@@ -639,7 +639,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 3,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Dorsett City'),
             ],
             [
@@ -647,7 +647,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Dorsett City'),
             ],
             [
@@ -655,7 +655,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 100,
                 'availableFrom' => new \DateTime('2011-01-03'),
-                '$availableTo' => new \DateTime('2011-01-04'),
+                'availableTo' => new \DateTime('2011-01-04'),
                 'host_id' => $this->getReference('Dorsett City'),
             ],
             [
@@ -663,7 +663,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 4,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('Dorsett City'),
             ],
             [
@@ -671,7 +671,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 4,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Dorsett City'),
             ],
             [
@@ -679,7 +679,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('Dorsett City'),
             ],
             [
@@ -687,7 +687,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-01'),
-                '$availableTo' => new \DateTime('2011-01-02'),
+                'availableTo' => new \DateTime('2011-01-02'),
                 'host_id' => $this->getReference('Victoria'),
             ],
             [
@@ -695,7 +695,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 3,
                 'price' => 100,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Victoria'),
             ],
             [
@@ -703,7 +703,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Victoria'),
             ],
             [
@@ -711,7 +711,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-03'),
-                '$availableTo' => new \DateTime('2011-01-04'),
+                'availableTo' => new \DateTime('2011-01-04'),
                 'host_id' => $this->getReference('Victoria'),
             ],
             [
@@ -719,7 +719,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 4,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('Victoria'),
             ],
             [
@@ -727,7 +727,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 4,
                 'price' => 100,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Victoria'),
             ],
             [
@@ -735,7 +735,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('Victoria'),
             ],
             [
@@ -743,7 +743,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-01'),
-                '$availableTo' => new \DateTime('2011-01-02'),
+                'availableTo' => new \DateTime('2011-01-02'),
                 'host_id' => $this->getReference('Studio'),
             ],
             [
@@ -751,7 +751,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 3,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Studio'),
             ],
             [
@@ -759,7 +759,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Studio'),
             ],
             [
@@ -767,7 +767,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 2,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-03'),
-                '$availableTo' => new \DateTime('2011-01-04'),
+                'availableTo' => new \DateTime('2011-01-04'),
                 'host_id' => $this->getReference('Studio'),
             ],
             [
@@ -775,7 +775,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 4,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('Studio'),
             ],
             [
@@ -783,7 +783,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 4,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-02'),
-                '$availableTo' => new \DateTime('2011-01-03'),
+                'availableTo' => new \DateTime('2011-01-03'),
                 'host_id' => $this->getReference('Studio'),
             ],
             [
@@ -791,7 +791,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
                 'numberOfRooms' => 1,
                 'price' => 201,
                 'availableFrom' => new \DateTime('2011-01-05'),
-                '$availableTo' => new \DateTime('2011-01-06'),
+                'availableTo' => new \DateTime('2011-01-06'),
                 'host_id' => $this->getReference('Studio'),
             ],
 
@@ -809,7 +809,7 @@ class ApartamentFixture extends Fixture implements OrderedFixtureInterface{
             $apartament->setNumberOfRooms($item['numberOfRooms']);
             $apartament->setPrice($item['price']);
             $apartament->setAvailableFrom($item['availableFrom']);
-            $apartament->setAvailableTo($item['$availableTo']);
+            $apartament->setAvailableTo($item['availableTo']);
             $apartament->setHost($item['host_id']);
 
             $manager->persist($apartament);

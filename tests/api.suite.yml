@@ -9,4 +9,4 @@ modules:
         - Symfony:
               part: SERVICES
               app_path: 'src'
-    - Asserts
+        - Asserts

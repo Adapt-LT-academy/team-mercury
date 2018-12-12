@@ -57,10 +57,12 @@ class RoomOrderConversation extends Conversation
             function ($answer) {
               //  $this->city = $answer->getText();
 
+
                 $city = $this->getContainer()->get(OptionsService::class)->isCityAvailable($answer->getText());
 
                 if ($city){
                     $this->city = $answer->getText();
+
                     $this->askType();
                 }else{
                     $this->say('Sorry, in this city are any host. Please try again.');
@@ -97,7 +99,9 @@ class RoomOrderConversation extends Conversation
         $buttons = [];
         foreach ($hosts as $host)
         {
+
             $buttons[] = Button::create($host->getName())->value($host->getName());
+
 
         }
         $question = Question::create('In which '.$this->type.' do you want to stay?');
@@ -172,7 +176,9 @@ class RoomOrderConversation extends Conversation
         $buttons = [];
         foreach ($apartments as $apartment)
         {
+
             $buttons[] = Button::create($apartment->getNumber())->value($apartment->getNumber());
+
         }
 
         $question = Question::create('In which apartment do you want to stay?');
@@ -201,7 +207,9 @@ class RoomOrderConversation extends Conversation
 
         'What is your name?',
             function ($answer) {
+
                 $this->customer = $answer->getText();
+
                 $this->say('Okay. Your apartament is ordered.');
                 $this->say('City: ' . $this->city);
                 $this->say($this->type . ' : ' . $this->host);
@@ -234,6 +242,8 @@ class RoomOrderConversation extends Conversation
 
     public function stopConversation(IncomingMessage $message)
     {
+
         return $message->getMessage() === 'stop';
+
     }
 }

@@ -75,7 +75,7 @@ class orderTest extends KernelTestCase
          */
         $apartament = $this->entityManager
             ->getRepository(Apartament::class)
-            ->findOneBy(['availableFrom' => '2011-01-01', 'availableTo' => '2011-01-02', 'host'=>$host])
+            ->findOneBy(['availableFrom' => new \DateTime('2011-01-01'), 'availableTo' => new \DateTime('2011-01-02'), 'host'=>$host])
         ;
 
         /**

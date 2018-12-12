@@ -56,6 +56,28 @@ class Apartament
      */
     private $host;
     /**
+     * @ORM\OneToMany(targetEntity="OrderedRoom", mappedBy="order", cascade={"persist"})
+     */
+    private $orderedRoom;
+
+    /**
+     * @return mixed
+     */
+    public function getOrderedRoom()
+    {
+        return $this->orderedRoom;
+    }
+
+    /**
+     * @param mixed $orderedRoom
+     * @return Apartament
+     */
+    public function setOrderedRoom($orderedRoom)
+    {
+        $this->orderedRoom = $orderedRoom;
+        return $this;
+    }
+    /**
      * @return int
      */
     public function getId(): int

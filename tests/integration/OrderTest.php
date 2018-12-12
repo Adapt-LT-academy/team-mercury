@@ -9,13 +9,14 @@
 namespace App\Tests;
 
 use App\Entity\Apartament;
+use App\Entity\City;
 use App\Entity\Customer;
 use App\Entity\Host;
 use App\Entity\Order;
 use App\Entity\OrderedRoom;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
-class integration extends KernelTestCase
+class orderTest extends KernelTestCase
 {
     /**
      * @var \Doctrine\ORM\EntityManager
@@ -45,21 +46,21 @@ class integration extends KernelTestCase
 
     public function testOrderTotal()
     {
-//        /**
-//         * @var City $nameCity
-//         */
-//        $nameCity = $this->entityManager
-//            ->getRepository(City::class)
-//            ->findOneBy(['name' => 'Kaunas'])
-//        ;
-//
-//        /**
-//         * @var Host $type
-//         */
-//        $type = $this->entityManager
-//            ->getRepository(Host::class)
-//            ->findOneBy(['type' => 'motel', 'city'=>'Kaunas'])
-//        ;
+        /**
+         * @var City $city
+         */
+        $nameCity = $this->entityManager
+            ->getRepository(City::class)
+            ->findOneBy(['city' => 'Kaunas'])
+        ;
+
+        /**
+         * @var Host $type
+         */
+        $type = $this->entityManager
+            ->getRepository(Host::class)
+            ->findOneBy(['type' => 'motel', 'city'=>'Kaunas'])
+        ;
 
         /**
          * @var Host $host
@@ -96,7 +97,7 @@ class integration extends KernelTestCase
 
         $orderRoom->setOrder($order);
 
-        $this->assertEquals(1500, $orderRoom->getPrice());
+        $this->assertEquals(201, $orderRoom->getPrice());
     }
 
 }

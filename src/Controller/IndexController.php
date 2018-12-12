@@ -5,9 +5,7 @@
  * Date: 18.11.7
  * Time: 18.32
  */
-
 namespace App\Controller;
-
 use App\Service\RoomOrderConversation;
 use BotMan\BotMan\BotMan;
 use BotMan\BotMan\BotManFactory;
@@ -24,22 +22,16 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use App\Traits\ContainerAwareConversationTrait;
 use BotMan\BotMan\Messages\Incoming\IncomingMessage;
-
 class IndexController extends Controller
 {
     use ContainerAwareConversationTrait;
-
-
-
     /**
      * @Route(path="/", methods={"GET"}, name="botmanChat")
      */
     public function index(): Response
     {
-
         return $this->render('base.html.twig');
     }
-
     /**
      * @Route(path="/chat", methods={"GET"}, name="botman")
      */
@@ -47,15 +39,12 @@ class IndexController extends Controller
     {
         return $this->render('botman.html.twig');
     }
-
     /**
      * @Route("/message", name="message")
      */
-
     function messageAction()
     {
         $this->converstionObj = new RoomOrderConversation();
-
         // Create a BotMan instance, using the WebDriver
         DriverManager::loadDriver(\BotMan\Drivers\Web\WebDriver::class);
         $adapter = new FilesystemAdapter();
@@ -64,7 +53,6 @@ class IndexController extends Controller
         $dialogflow = ApiAi::create('s0meRand0mT0ken')->listenForAction();
         $botman->middleware->received($dialogflow);
         // Give the bot some things to listen for.
-
         $botman->hears(
             '(hello|hi|hey)',
             function (BotMan $bot) {
@@ -76,7 +64,6 @@ class IndexController extends Controller
             'stop',
             function (BotMan $bot) {
                 $bot->reply('stopped');
-
             }
         )->stopsConversation();
         // Start listening

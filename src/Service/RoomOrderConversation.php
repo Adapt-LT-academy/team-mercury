@@ -5,9 +5,7 @@
  * Date: 18.11.29
  * Time: 11.37
  */
-
 namespace App\Service;
-
 use App\Entity\Customer;
 use App\Entity\Host;
 use App\Entity\OrderedRoom;
@@ -20,33 +18,21 @@ use http\Exception\RuntimeException;
 use App\Entity\Apartament;
 use App\Entity\Order;
 use Exception;
-
-
 class RoomOrderConversation extends Conversation
 {
     use ContainerAwareConversationTrait;
-
     public $city;
-
     public $type;
-
     public $host;
-
     public $apartment;
-
     public $customer;
-
     public $price;
-
     public $orderedFromDate;
-
     public $orderedToDate;
-
     public function run()
     {
         $this->askCity();
     }
-
     public function askCity()
     {
         $this->ask(
@@ -55,11 +41,8 @@ class RoomOrderConversation extends Conversation
          */
             'In which city do you want to stay?',
             function ($answer) {
-              //  $this->city = $answer->getText();
-
 
                 $city = $this->getContainer()->get(OptionsService::class)->isCityAvailable($answer->getText());
-
                 if ($city){
                     $this->city = $answer->getText();
 
@@ -71,7 +54,6 @@ class RoomOrderConversation extends Conversation
             }
         );
     }
-
     public function askType()
     {
         $question = Question::create('In which type of host do you want to stay?');
@@ -91,17 +73,14 @@ class RoomOrderConversation extends Conversation
             }
         );
     }
-
     public function askHost()
     {
         $hosts = $this->getContainer()->get(OptionsService::class)->getHosts($this->type, $this->city);
-
         $buttons = [];
         foreach ($hosts as $host)
         {
 
             $buttons[] = Button::create($host->getName())->value($host->getName());
-
 
         }
         $question = Question::create('In which '.$this->type.' do you want to stay?');
@@ -119,7 +98,6 @@ class RoomOrderConversation extends Conversation
             }
         );
     }
-
     public function askFromDate()
     {
         $question = Question::create('When do you want to come?');
@@ -137,7 +115,6 @@ class RoomOrderConversation extends Conversation
             }
         );
     }
-
     public function askToDate()
     {
         $question = Question::create('When do you want to leave?');
@@ -154,9 +131,7 @@ class RoomOrderConversation extends Conversation
                 }
             }
         );
-
     }
-
     private function findApartments()
     {
         $apartments = $this->getContainer()->get(OptionsService::class)->getApartments($this->host->getName());
@@ -164,15 +139,12 @@ class RoomOrderConversation extends Conversation
         {
             $this->askApartment($apartments);
         }else{
-
             $this->say('Sorry, there are any available rooms at this time. Please try again.');
             $this->askFromDate();
         }
     }
-
     public function askApartment($apartments)
     {
-
         $buttons = [];
         foreach ($apartments as $apartment)
         {
@@ -180,7 +152,6 @@ class RoomOrderConversation extends Conversation
             $buttons[] = Button::create($apartment->getNumber())->value($apartment->getNumber());
 
         }
-
         $question = Question::create('In which apartment do you want to stay?');
         $question->addButtons(
             $buttons
@@ -200,12 +171,10 @@ class RoomOrderConversation extends Conversation
             }
         );
     }
-
     public function askCustomerData()
     {
         $this->ask(
-
-        'What is your name?',
+            'What is your name?',
             function ($answer) {
 
                 $this->customer = $answer->getText();
@@ -216,20 +185,16 @@ class RoomOrderConversation extends Conversation
                 $this->say('Date: from ' . $this->orderedFromDate->format('Y-m-d') . ' to ' . $this->orderedToDate->format('Y-m-d'));
                 $this->say('Price: ' . $this->price);
                 $this->addDataToDatabase();
-
             }
         );
     }
-
     public function addDataToDatabase(){
         $customerObject = new Customer();
         $customerObject->setName($this->customer);
         $this->getContainer()->get(CustomerService::class)->addCustomerData($customerObject);
-
         $orderObject = new Order();
         $orderObject->setCustomer($customerObject);
         $this->getContainer()->get(OrderService::class)->addOrderData($orderObject);
-
         $apartment = $this->getContainer()->get(OptionsService::class)->getApartment($this->apartment->getId());
         $orderedRoomObject = new OrderedRoom();
         $orderedRoomObject->setApartament($apartment);
@@ -239,7 +204,6 @@ class RoomOrderConversation extends Conversation
         $orderedRoomObject->setOrder($orderObject);
         $this->getContainer()->get(OrderedRoomService::class)->addOrderedRoomData($orderedRoomObject);
     }
-
     public function stopConversation(IncomingMessage $message)
     {
 

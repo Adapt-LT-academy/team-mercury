@@ -3,8 +3,10 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+
 /**
- * @ORM\ Entity
+ * @ORM\ Entity(repositoryClass = "App\Repository\ApartamentRepository")
  */
 
 
@@ -28,7 +30,6 @@ class Apartament
     protected $number;
 
     /**
-     * @TODO susitvarkyti naming
      * @var int
      *
      * @ORM\Column(type="integer", length=11)
@@ -54,6 +55,28 @@ class Apartament
      * @ORM\JoinColumn(name="host_id", referencedColumnName="id")
      */
     private $host;
+    /**
+     * @ORM\OneToMany(targetEntity="OrderedRoom", mappedBy="order", cascade={"persist"})
+     */
+    private $orderedRoom;
+
+    /**
+     * @return mixed
+     */
+    public function getOrderedRoom()
+    {
+        return $this->orderedRoom;
+    }
+
+    /**
+     * @param mixed $orderedRoom
+     * @return Apartament
+     */
+    public function setOrderedRoom($orderedRoom)
+    {
+        $this->orderedRoom = $orderedRoom;
+        return $this;
+    }
     /**
      * @return int
      */

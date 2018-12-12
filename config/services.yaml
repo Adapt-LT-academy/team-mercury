@@ -40,3 +40,12 @@ services:
     App\Service\OptionsService:
         class: App\Service\OptionsService
         public: trues
+    App\Service\CustomerService:
+        class: App\Service\CustomerService
+        public: trues
+    App\Service\OrderService:
+        class: App\Service\OrderService
+        public: trues
+    App\Service\OrderedRoomService:
+        class: App\Service\OrderedRoomService
+        public: trues

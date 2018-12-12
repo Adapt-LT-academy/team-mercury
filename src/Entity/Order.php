@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 /**
  * @ORM\ Entity
  * @ORM\ Table(name="orders")
@@ -27,19 +28,19 @@ class Order
      * @ORM\OneToMany(targetEntity="Apartament", mappedBy="order")
      * @ORM\JoinColumn(name="room_id", referencedColumnName="id")
      */
-    private $apartament;
+    protected $apartament;
 
     /**
      * Customer can have many orders
-     * @ORM\ManyToOne(targetEntity="Customer")
+     * @ORM\ManyToOne(targetEntity="Customer", cascade={"persist"})
      * @ORM\JoinColumn(name="customer_id", referencedColumnName="id")
      */
-    private $customer;
+    protected $customer;
     /**
      * One orderdRoom has many orders. This is the inverse side.
-     * @ORM\OneToMany(targetEntity="OrderedRoom", mappedBy="order")
+     * @ORM\OneToMany(targetEntity="OrderedRoom", mappedBy="order", cascade={"persist"})
      */
-    private $orderedRooms;
+    protected $orderedRooms;
 
     /**
      * @return int

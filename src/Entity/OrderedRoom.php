@@ -35,7 +35,7 @@ class OrderedRoom
      */
     protected $price = 0;
     /**
-     * @ORM\OneToOne(targetEntity="Apartament", cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="Apartament", cascade={"persist"})
      * @ORM\JoinColumn(name="apartament_id", referencedColumnName="id")
      */
     protected $apartament;

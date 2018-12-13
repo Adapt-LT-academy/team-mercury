@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3753b1ec-ff6f-4f4e-9bc2-12d7576090a1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HOSTEL🍟" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/In which type of host do you want to stay?" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__call" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__sleep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__wakeup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/adddatatodatabase" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ask" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/askapartment" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/askcity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/askcustomerdata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/askforaudio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/askforimages" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/askforlocation" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/askforvideos" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/askfromdate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/askhost" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asktodate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/asktype" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/button" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/getbot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/getcontainer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/getconversationcachetime" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hasmacro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hostel" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/macro" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mixin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/null" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/repeat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/run" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/say" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/setbot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/setcontainer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/show" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/skipsconversation" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stopconversation" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stopsconversation" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/functional/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/OptionsServiceTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/OptionsServiceTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/true" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/acceptance/ApplicationAvailabilityCest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+              <folding>
+                <element signature="e#119#150#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/integration/OrderTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="661">
+              <caret line="99" column="38" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/unit/OptionsServiceTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-314">
+              <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+              <folding>
+                <element signature="e#6#84#0#PHP" expanded="true" />
+                <element signature="e#113#139#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Kernel.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-749" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Service/OrderService.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DataFixtures/HostFixtures.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="13" column="35" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DataFixtures/CityFixtures.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DataFixtures/ApartamentFixture.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9780">
+              <caret line="655" column="30" selection-start-line="655" selection-start-column="30" selection-end-line="655" selection-end-column="30" />
+              <folding>
+                <element signature="e#34#60#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/tests/unit/OptionsServiceTest.php" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="y" value="27" />
+    <option name="width" value="994" />
+    <option name="height" value="988" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="team-mercury" type="b2602c69:ProjectViewProjectNode" />
+              <item name="team-mercury" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="team-mercury" type="b2602c69:ProjectViewProjectNode" />
+              <item name="team-mercury" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="team-mercury" type="b2602c69:ProjectViewProjectNode" />
+              <item name="team-mercury" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="team-mercury" type="b2602c69:ProjectViewProjectNode" />
+              <item name="team-mercury" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="integration" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="team-mercury" type="b2602c69:ProjectViewProjectNode" />
+              <item name="team-mercury" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="unit" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="team-mercury" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d5de6e44-f2d2-411c-bef2-1780b641455d" name="Default Changelist" comment="" />
+      <created>1540829946042</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1540829946042</updated>
+      <workItem from="1540829948395" duration="620000" />
+      <workItem from="1541287510195" duration="5000" />
+      <workItem from="1541603684741" duration="5717000" />
+      <workItem from="1543483784052" duration="7640000" />
+      <workItem from="1543496910615" duration="3055000" />
+      <workItem from="1543504743808" duration="119000" />
+      <workItem from="1543504886417" duration="2348000" />
+      <workItem from="1543585998759" duration="597000" />
+      <workItem from="1543661368614" duration="11905000" />
+      <workItem from="1543737134673" duration="2411000" />
+      <workItem from="1543755019896" duration="599000" />
+      <workItem from="1543769793143" duration="157000" />
+      <workItem from="1543778598769" duration="2075000" />
+      <workItem from="1543821734217" duration="3685000" />
+      <workItem from="1543836484327" duration="1849000" />
+      <workItem from="1543849195712" duration="1389000" />
+      <workItem from="1543851893584" duration="2566000" />
+      <workItem from="1544522841432" duration="997000" />
+      <workItem from="1544525203576" duration="9259000" />
+      <workItem from="1544591791256" duration="7143000" />
+      <workItem from="1544604518100" duration="7372000" />
+      <workItem from="1544721874831" duration="817000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="567000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="27" width="1004" height="988" extended-state="4" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3035343" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32906976" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.33139536" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2472767" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32972974" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32972974" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32972974" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.42486486" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection Results" order="12" weight="0.32972974" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout-to-restore>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/tests/unit/OptionsServiceTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-314">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+          <folding>
+            <element signature="e#6#84#0#PHP" expanded="true" />
+            <element signature="e#113#139#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Kernel.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-749" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/integration/OrderTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="661">
+          <caret line="99" column="38" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

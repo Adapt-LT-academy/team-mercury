@@ -18,17 +18,17 @@ class RoomOrderTest
         $I->wantTo('Check if botman message endpoint responds');
         $I->sendBotMessage('message', 'Hi');
         $I->seeResponseContainsJson(['messages' => [['text' => 'In which city do you want to stay?']]]);
-        $I->sendBotMessage('message', 'Kaunas');
+        $I->sendBotMessage('message', 'Vilnius');
         $I->seeResponseContainsJson(['messages' => [['text' => 'In which type of host do you want to stay?']]]);
         $I->sendBotMessage('message', 'hostel');
         $I->seeResponseContainsJson(['messages' => [['text' => 'In which hostel do you want to stay?']]]);
-        $I->sendBotMessage('message', 'Hostel1');
+        $I->sendBotMessage('message', 'Baltazaras');
         $I->seeResponseContainsJson(['messages' => [['text' => 'When do you want to come?']]]);
         $I->sendBotMessage('message', '2011-01-01');
         $I->seeResponseContainsJson(['messages' => [['text' => 'When do you want to leave?']]]);
         $I->sendBotMessage('message', '2011-01-02');
         $I->seeResponseContainsJson(['messages' => [['text' => 'In which apartment do you want to stay?']]]);
-        $I->sendBotMessage('message', '102');
+        $I->sendBotMessage('message', '101');
         $I->seeResponseContainsJson(['messages' => [['text' => 'What is your name?']]]);
         $I->sendBotMessage('message', 'Customer1');
         $I->seeResponseContainsJson(
@@ -36,10 +36,10 @@ class RoomOrderTest
                 'messages' =>
                     [
                         ['text' => 'Okay. Your apartament is ordered.'],
-                        ['text' => 'City: Kaunas'],
-                        ['text' => 'hostel: Hostel1'],
+                        ['text' => 'City: Vilnius'],
+                        ['text' => 'hostel: Baltazaras'],
                         ['text' => 'Date: from 2011-01-01 to 2011-01-01'],
-                        ['text' => 'Price: 22'],
+                        ['text' => 'Price: 201'],
 
                     ],
             ]

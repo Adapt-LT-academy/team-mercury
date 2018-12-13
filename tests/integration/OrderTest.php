@@ -97,7 +97,7 @@ class orderTest extends KernelTestCase
 
         $orderRoom->setOrder($order);
 
-        $this->assertEquals(201, $orderRoom->getPrice());
+        $this->assertEquals(201, $order->getOrderedRooms()->getPrice());
     }
 
 }

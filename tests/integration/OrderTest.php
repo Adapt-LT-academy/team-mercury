@@ -88,7 +88,7 @@ class orderTest extends KernelTestCase
 
         $orderRoom = new OrderedRoom();
         $orderRoom->setApartament($apartament);
-        $orderRoom->setPrice($apartament->getId());
+       // $orderRoom->setPrice($apartament->getId());
 
         $order = new Order();
         $order->setApartament($apartament);

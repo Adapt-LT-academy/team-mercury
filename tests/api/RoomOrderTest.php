@@ -44,5 +44,18 @@ class RoomOrderTest
                     ],
             ]
         );
+        $I->assertEquals(
+            [
+                'messages' =>
+                    [
+                        ['text' => 'Okay. Your apartament is ordered.'],
+                        ['text' => 'City: Vilnius'],
+                        ['text' => 'hostel: Baltazaras'],
+                        ['text' => 'Date: from 2011-01-01 to 2011-01-01'],
+                        ['text' => 'Price: 201'],
+
+                    ],
+            ]
+        );
     }
 }

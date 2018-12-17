@@ -14,9 +14,9 @@
 ###> symfony/web-server-bundle ###
 /.web-server-pid
 ###< symfony/web-server-bundle ###
-/.idea
+
 .idea
-.idea/*
+
 ###> phpunit/phpunit ###
 /phpunit.xml
 ###< phpunit/phpunit ###

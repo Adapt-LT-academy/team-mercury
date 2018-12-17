@@ -51,7 +51,6 @@ class OrderedRoom
      * @return int
      */
 
-
     public function __construct() {
         $this->order = new ArrayCollection();
     }

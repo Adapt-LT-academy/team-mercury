@@ -33,7 +33,6 @@ class OptionsService
      */
     public function getHosts(string $type, string $city)
     {
-        //$host = new Host();
         return $this->em->getRepository(Host::class)->findHostsByCityAndType($city, $type);
     }
 

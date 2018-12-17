@@ -13,16 +13,13 @@ use Doctrine\ORM\EntityRepository;
 
 class ApartamentRepository extends EntityRepository
 {
-    private function getNow(){
-        return now();
-    }
     public function findApartamentsByHotelNameAndDataTime($hostName)
     {
-        $qb = $this->createQueryBuilder('a');
-        $qb->select('a')
-            ->join('a.host','h')
+        $qb = $this->createQueryBuilder('apartament');
+        $qb->select('apartament')
+            ->join('apartament.host','h')
             ->where(' h.name = :host')
-            ->andWhere('a.availableTo > CURRENT_TIMESTAMP()')
+            ->andWhere('apartament.availableTo > CURRENT_TIMESTAMP()')
             ->setParameter('host', $hostName);
         return $qb->getQuery()->getResult();
     }

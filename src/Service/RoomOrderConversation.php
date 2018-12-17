@@ -14,6 +14,7 @@ use BotMan\BotMan\Messages\Conversations\Conversation;
 use BotMan\BotMan\Messages\Incoming\IncomingMessage;
 use BotMan\BotMan\Messages\Outgoing\Actions\Button;
 use BotMan\BotMan\Messages\Outgoing\Question;
+use Doctrine\Common\Collections\ArrayCollection;
 use http\Exception\RuntimeException;
 use App\Entity\Apartament;
 use App\Entity\Order;
@@ -31,14 +32,13 @@ class RoomOrderConversation extends Conversation
     public $orderedToDate;
     public function run()
     {
+        $this->say('Welcome!');
         $this->askCity();
     }
     public function askCity()
     {
         $this->ask(
-        /**
-         * @param $answer
-         */
+
             'In which city do you want to stay?',
             function ($answer) {
 
@@ -69,22 +69,12 @@ class RoomOrderConversation extends Conversation
             $question,
             function ($answer) {
                 $this->type = $answer->getText();
-                $this->askHost();
+                $this->conversationAboutHost();
             }
         );
     }
-    public function askHost()
-    {
-        $hosts = $this->getContainer()->get(OptionsService::class)->getHosts($this->type, $this->city);
-        $buttons = [];
-        foreach ($hosts as $host)
-        {
 
-            $buttons[] = Button::create($host->getName())->value($host->getName());
-
-        }
-        $question = Question::create('In which '.$this->type.' do you want to stay?');
-        $question->addButtons($buttons);
+    public function askHost($question, $hosts){
         $this->ask(
             $question,
             function ($answer) use ($hosts){
@@ -97,6 +87,22 @@ class RoomOrderConversation extends Conversation
                 $this->askFromDate();
             }
         );
+    }
+
+    public function conversationAboutHost()
+    {
+        $hosts = $this->getContainer()->get(OptionsService::class)->getHosts($this->type, $this->city);
+        $buttons = [];
+        foreach ($hosts as $host)
+        {
+
+            $buttons[] = Button::create($host->getName())->value($host->getName());
+
+        }
+        $question = Question::create('In which '.$this->type.' do you want to stay?');
+        $question->addButtons($buttons);
+        $this->askHost($question, $hosts);
+
     }
     public function askFromDate()
     {
@@ -137,25 +143,13 @@ class RoomOrderConversation extends Conversation
         $apartments = $this->getContainer()->get(OptionsService::class)->getApartments($this->host->getName());
         if (count($apartments) > 0)
         {
-            $this->askApartment($apartments);
+            $this->conversationAboutApartament($apartments);
         }else{
             $this->say('Sorry, there are any available rooms at this time. Please try again.');
             $this->askFromDate();
         }
     }
-    public function askApartment($apartments)
-    {
-        $buttons = [];
-        foreach ($apartments as $apartment)
-        {
-
-            $buttons[] = Button::create($apartment->getNumber())->value($apartment->getNumber());
-
-        }
-        $question = Question::create('In which apartment do you want to stay?');
-        $question->addButtons(
-            $buttons
-        );
+    private function askApartament($question, $apartments){
         $this->ask(
             $question,
             function ($answer) use ($apartments){
@@ -170,6 +164,19 @@ class RoomOrderConversation extends Conversation
                 $this->askCustomerData();
             }
         );
+    }
+    public function conversationAboutApartament($apartments)
+    {
+        $buttons = [];
+        foreach ($apartments as $apartment)
+        {
+
+            $buttons[] = Button::create($apartment->getNumber()." From ".$apartment->getAvailableFrom()->format('Y-m-d')." To ".$apartment->getAvailableTo()->format('Y-m-d'))->value($apartment->getNumber());
+
+        }
+        $question = Question::create('In which apartment do you want to stay?');
+        $question->addButtons($buttons);
+        $this->askApartament($question, $apartments);
     }
     public function askCustomerData()
     {

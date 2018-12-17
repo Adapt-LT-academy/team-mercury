@@ -19,7 +19,6 @@ class CustomerService
     {
         $this->om = $manager;
     }
-
     public function addCustomerData(Customer $customer){
         $this->om->persist($customer);
         $this->om->flush();
